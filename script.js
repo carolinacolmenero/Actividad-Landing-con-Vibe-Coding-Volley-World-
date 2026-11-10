@@ -56,3 +56,23 @@ if ("IntersectionObserver" in window && !prefersReducedMotion) {
 } else {
   revealElements.forEach((element) => element.classList.add("is-visible"));
 }
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const galleryCards = document.querySelectorAll(".gallery-card");
+
+filterButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filterButtons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const category = btn.getAttribute("data-filter");
+
+    galleryCards.forEach((card) => {
+      if (category === "all" || card.getAttribute("data-category") === category) {
+        card.classList.remove("is-hidden");
+      } else {
+        card.classList.add("is-hidden");
+      }
+    });
+  });
+});

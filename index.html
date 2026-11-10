@@ -420,6 +420,34 @@
           width: 56px;
           height: 56px;
           font-size: 1.45rem;
+
+      @media (max-width: 760px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .nav {
+          position: absolute;
+          top: 82px;
+          left: 1rem;
+          right: 1rem;
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.9rem;
+          padding: 1rem 1.1rem;
+          border-radius: 16px;
+          background: rgba(11, 31, 58, 0.97);
+          box-shadow: 0 12px 30px rgba(11, 31, 58, 0.22);
+        }
+
+        .nav.open {
+          display: flex;
+        }
+
+        .nav a {
+          letter-spacing: 0.08em;
+
         }
       }
     </style>
@@ -485,7 +513,20 @@
     <div id="contacto" class="anchor" aria-hidden="true"></div>
 
     <script>
-      // Sin comportamiento responsive por ahora; solo navegación por anclas.
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.nav');
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.querySelectorAll('.nav a').forEach((link) => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
     </script>
   </body>
 </html>

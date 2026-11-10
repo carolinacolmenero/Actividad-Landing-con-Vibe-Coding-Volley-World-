@@ -3,471 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Volley World</title>
+    <meta
+      name="description"
+      content="Volley World: descubre cómo se juega al voleibol, sus reglas y la emoción de cada punto."
+    />
+    <meta name="theme-color" content="#081b31" />
+    <title>Volley World — Siente la energía del vóley</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
-    <style>
-      :root {
-        --azul-oscuro: #0b1f3a;
-        --azul: #123f74;
-        --azul-claro: #5ac8ff;
-        --naranja: #ffb347;
-        --blanco: #ffffff;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        font-family: "Montserrat", Arial, sans-serif;
-        background: #f2f7ff;
-        color: var(--azul-oscuro);
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .container {
-        width: min(1200px, calc(100% - 2rem));
-        margin: 0 auto;
-      }
-
-      .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 20;
-        background: linear-gradient(180deg, rgba(10, 25, 48, 0.98), rgba(11, 31, 58, 0.94));
-        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 12px 30px rgba(11, 31, 58, 0.16);
-      }
-
-      .header-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 82px;
-        gap: 1.5rem;
-        padding: 0.3rem 0;
-      }
-
-      .logo {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.85rem;
-        color: var(--blanco);
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        font-size: 0.9rem;
-      }
-
-      .logo-mark {
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #ffffff 0%, #dff7ff 18%, #7ed8ff 28%, #0d5ec7 62%, #06182f 100%);
-        position: relative;
-        box-shadow: inset 0 0 0 4px rgba(255,255,255,0.55), 0 10px 24px rgba(94, 200, 255, 0.35);
-      }
-
-      .logo-mark::before,
-      .logo-mark::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        margin: auto;
-        border-radius: 50%;
-      }
-
-      .logo-mark::before {
-        width: 24px;
-        height: 24px;
-        border: 3px solid rgba(255,255,255,0.96);
-        border-top-color: transparent;
-        transform: rotate(28deg);
-      }
-
-      .logo-mark::after {
-        width: 8px;
-        height: 8px;
-        background: #fff;
-        left: 15px;
-        top: 12px;
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        gap: 1.8rem;
-      }
-
-      .nav a {
-        position: relative;
-        color: rgba(255,255,255,0.82);
-        font-size: 0.82rem;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        transition: color 0.2s ease, transform 0.2s ease;
-      }
-
-      .nav a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -0.55rem;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(90deg, var(--azul-claro), #d6f4ff);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.2s ease;
-      }
-
-      .nav a:hover,
-      .nav a:focus-visible {
-        color: var(--blanco);
-        transform: translateY(-1px);
-      }
-
-      .nav a:hover::after,
-      .nav a:focus-visible::after {
-        transform: scaleX(1);
-      }
-
-      .nav-cta {
-        background: linear-gradient(135deg, #ffd38c, var(--naranja));
-        color: #0d223f !important;
-        padding: 0.8rem 1.2rem;
-        border-radius: 999px;
-        box-shadow: 0 12px 24px rgba(255, 179, 71, 0.28);
-        letter-spacing: 0.08em;
-      }
-
-      .nav-cta::after {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: none;
-        border: none;
-        background: transparent;
-        color: #fff;
-        font-size: 1.9rem;
-        cursor: pointer;
-      }
-
-      .anchor {
-        display: block;
-        width: 100%;
-        height: 1px;
-      }
-
-      .hero {
-        position: relative;
-        overflow: hidden;
-        min-height: min(760px, calc(100svh - 82px));
-        display: flex;
-        align-items: center;
-        padding: clamp(4rem, 8vw, 7rem) 0;
-        color: var(--blanco);
-        background:
-          radial-gradient(ellipse at 10% 90%, rgba(18, 63, 116, 0.9), transparent 45%),
-          linear-gradient(120deg, #08172d 0%, #0b1f3a 55%, #123f74 100%);
-      }
-
-      .hero::before {
-        content: "";
-        position: absolute;
-        width: 34rem;
-        height: 34rem;
-        top: -22rem;
-        left: 37%;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.025), 0 0 0 7rem rgba(255, 255, 255, 0.02);
-        pointer-events: none;
-      }
-
-      .hero-inner {
-        position: relative;
-        display: grid;
-        grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
-        align-items: center;
-        gap: clamp(2.5rem, 6vw, 5.5rem);
-      }
-
-      .hero-copy {
-        max-width: 550px;
-      }
-
-      .hero-eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.65rem;
-        margin-bottom: 1.4rem;
-        color: #bcecff;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-      }
-
-      .hero-eyebrow::before {
-        content: "";
-        width: 2rem;
-        height: 2px;
-        background: var(--naranja);
-      }
-
-      .hero h1 {
-        max-width: 10ch;
-        font-size: clamp(3.2rem, 6.4vw, 5.8rem);
-        line-height: 0.98;
-        letter-spacing: -0.065em;
-        text-wrap: balance;
-      }
-
-      .hero h1 span {
-        color: var(--naranja);
-      }
-
-      .hero-description {
-        max-width: 440px;
-        margin-top: 1.5rem;
-        color: rgba(255, 255, 255, 0.76);
-        font-size: clamp(1rem, 1.5vw, 1.12rem);
-        line-height: 1.8;
-      }
-
-      .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 0.9rem;
-        margin-top: 2rem;
-      }
-
-      .button {
-        display: inline-flex;
-        min-height: 52px;
-        align-items: center;
-        justify-content: center;
-        gap: 0.65rem;
-        padding: 0.9rem 1.35rem;
-        border: 1px solid transparent;
-        border-radius: 999px;
-        font-size: 0.82rem;
-        font-weight: 800;
-        letter-spacing: 0.04em;
-        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-      }
-
-      .button:hover,
-      .button:focus-visible {
-        transform: translateY(-2px);
-      }
-
-      .button-primary {
-        color: #0d223f;
-        background: linear-gradient(135deg, #ffd38c, var(--naranja));
-        box-shadow: 0 12px 28px rgba(255, 179, 71, 0.24);
-      }
-
-      .button-primary:hover,
-      .button-primary:focus-visible {
-        box-shadow: 0 16px 32px rgba(255, 179, 71, 0.36);
-      }
-
-      .button-secondary {
-        color: var(--blanco);
-        border-color: rgba(255, 255, 255, 0.3);
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      .button-secondary:hover,
-      .button-secondary:focus-visible {
-        background: rgba(255, 255, 255, 0.12);
-      }
-
-      .hero-visual {
-        position: relative;
-        min-height: 430px;
-        margin: 0;
-      }
-
-      .hero-photo {
-        position: absolute;
-        inset: 0 0 0 5%;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 46% 46% 1.5rem 1.5rem;
-        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
-        transform: rotate(2deg);
-      }
-
-      .hero-photo::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, rgba(6, 24, 47, 0.03) 35%, rgba(6, 24, 47, 0.68) 100%);
-      }
-
-      .hero-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        transform: scale(1.03) rotate(-2deg);
-      }
-
-      .hero-photo-label {
-        position: absolute;
-        z-index: 1;
-        right: 1.6rem;
-        bottom: 1.5rem;
-        left: 1.6rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        color: var(--blanco);
-        font-size: 0.72rem;
-        font-weight: 800;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-
-      .hero-ball {
-        position: absolute;
-        z-index: 2;
-        top: 12%;
-        left: 0;
-        display: grid;
-        width: 68px;
-        height: 68px;
-        place-items: center;
-        border: 5px solid rgba(255, 255, 255, 0.85);
-        border-radius: 50%;
-        color: #0d223f;
-        background: linear-gradient(135deg, #fff4d8, var(--naranja));
-        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
-        font-size: 1.8rem;
-        transform: rotate(-14deg);
-      }
-
-      @media (max-width: 850px) {
-        .hero {
-          min-height: auto;
-        }
-
-        .hero-inner {
-          grid-template-columns: 1fr;
-          gap: 3rem;
-        }
-
-        .hero-copy {
-          max-width: 650px;
-        }
-
-        .hero h1 {
-          max-width: 12ch;
-        }
-
-        .hero-visual {
-          min-height: min(58vw, 460px);
-        }
-      }
-
-      @media (max-width: 520px) {
-        .hero {
-          padding: 4rem 0 3rem;
-        }
-
-        .hero h1 {
-          font-size: clamp(3rem, 14vw, 4.2rem);
-        }
-
-        .hero-actions {
-          align-items: stretch;
-          flex-direction: column;
-        }
-
-        .button {
-          width: 100%;
-        }
-
-        .hero-visual {
-          min-height: 310px;
-        }
-
-        .hero-photo {
-          left: 4%;
-        }
-
-        .hero-ball {
-          width: 56px;
-          height: 56px;
-          font-size: 1.45rem;
-
-      @media (max-width: 760px) {
-        .menu-toggle {
-          display: block;
-        }
-
-        .nav {
-          position: absolute;
-          top: 82px;
-          left: 1rem;
-          right: 1rem;
-          display: none;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 0.9rem;
-          padding: 1rem 1.1rem;
-          border-radius: 16px;
-          background: rgba(11, 31, 58, 0.97);
-          box-shadow: 0 12px 30px rgba(11, 31, 58, 0.22);
-        }
-
-        .nav.open {
-          display: flex;
-        }
-
-        .nav a {
-          letter-spacing: 0.08em;
-
-        }
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a href="#inicio" class="logo" aria-label="Inicio">
-          <span class="logo-mark" aria-hidden="true"></span>
+        <a href="#inicio" class="logo" aria-label="Volley World, inicio">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="23" fill="#14579B" />
+              <g stroke="rgba(255,255,255,.7)" stroke-width="1">
+                <path d="M3 32h42M2 39h44M9 29v15M18 29v16M27 29v16M36 29v15" />
+              </g>
+              <circle cx="22" cy="16" r="11" fill="#F8FAFC" />
+              <g fill="none" stroke-linecap="round" stroke-width="2.6">
+                <path d="M13 10c5 1 9 4 11 8 1.5 3 1 6-.5 9" stroke="#14579B" />
+                <path d="M22 5c3 4 4 8 2 12-1.5 3.5-1.3 6.5 1 10" stroke="#F0A52F" />
+                <path d="M31 11c-4 1-7 3.5-8 7" stroke="#14579B" />
+              </g>
+              <circle cx="22" cy="16" r="11" stroke="rgba(255,255,255,.95)" stroke-width="1" />
+              <circle cx="24" cy="24" r="23" stroke="rgba(255,255,255,.86)" stroke-width="1" />
+            </svg>
+          </span>
           <span>Volley World</span>
         </a>
 
-        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-controls="main-nav"
+          aria-expanded="false"
+        >
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
 
-        <nav class="nav" aria-label="Menú principal">
+        <nav class="nav" id="main-nav" aria-label="Menú principal">
           <a href="#inicio">Inicio</a>
-          <a href="#historia">Historia</a>
-          <a href="#reglas">Reglas</a>
-          <a href="#equipos">Equipos</a>
-          <a href="#contacto" class="nav-cta">Contacto</a>
+          <a href="#contacto">¿Qué es el vóley?</a>
+          <a href="#contacto">Cómo se juega</a>
+          <a href="#contacto">Contacto</a>
+          <a class="nav-cta" href="#contacto">Descúbrelo <span aria-hidden="true">↗</span></a>
         </nav>
       </div>
     </header>
@@ -475,58 +66,59 @@
     <main>
       <section id="inicio" class="hero" aria-labelledby="hero-title">
         <div class="container hero-inner">
-          <div class="hero-copy">
-            <p class="hero-eyebrow">Volley World · Desde 1895</p>
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow hero-eyebrow">Volley World <span aria-hidden="true">·</span> Desde 1895</p>
             <h1 id="hero-title">Siente la energía <span>del vóley.</span></h1>
             <p class="hero-description">
-              Cada saque es una oportunidad. Descubre el deporte que convierte seis jugadores en un solo equipo.
+              Saques, recepciones y remates: descubre cómo se juega y por qué cada punto se vive al máximo.
             </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#historia">
-                Descubre el juego <span aria-hidden="true">→</span>
-              </a>
-              <a class="button button-secondary" href="#reglas">Conoce las reglas</a>
-            </div>
+            <a class="button button-primary" href="#contacto">
+              Descubre el voleibol <span aria-hidden="true">→</span>
+            </a>
           </div>
 
-          <figure class="hero-visual">
+          <figure class="hero-visual" data-reveal>
             <div class="hero-photo">
               <img
                 src="https://images.unsplash.com/photo-1592656094267-764a45160876?auto=format&fit=crop&w=1400&q=85"
-                alt="Partido de voleibol en plena acción"
+                alt="Balón de voleibol sobre la arena de una pista exterior"
                 fetchpriority="high"
               />
             </div>
             <figcaption class="hero-photo-label">
-              <span>Pasión · Equipo · Juego</span>
-              <span aria-hidden="true">01 / 06</span>
+              <span>Pasión <i aria-hidden="true">·</i> Equipo <i aria-hidden="true">·</i> Juego</span>
             </figcaption>
             <span class="hero-ball" aria-hidden="true">🏐</span>
+            <div class="hero-stamp" aria-label="Seis jugadores por lado">
+              <strong>6</strong>
+              <span>por lado en pista</span>
+            </div>
           </figure>
+        </div>
+        <a class="hero-scroll" href="#contacto">
+          <span>Así se juega</span>
+          <span class="scroll-line" aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <section id="contacto" class="contact-section" aria-labelledby="contact-title">
+        <div class="container contact-inner" data-reveal>
+          <div class="contact-copy">
+            <p class="eyebrow">El objetivo: mantener el balón en juego</p>
+            <h2 id="contact-title">Tres toques. Un punto. Pura emoción.</h2>
+            <p>
+              Dos equipos se enfrentan separados por una red. Cada lado tiene hasta tres contactos para devolver el balón
+              y buscar que toque el suelo del campo contrario.
+            </p>
+          </div>
+          <a
+            class="button button-dark"
+            href="mailto:?subject=Quiero%20saber%20m%C3%A1s%20sobre%20el%20voleibol&amp;body=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20el%20voleibol."
+          >
+            Contacto <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </section>
     </main>
-
-    <div id="historia" class="anchor" aria-hidden="true"></div>
-    <div id="reglas" class="anchor" aria-hidden="true"></div>
-    <div id="equipos" class="anchor" aria-hidden="true"></div>
-    <div id="contacto" class="anchor" aria-hidden="true"></div>
-
-    <script>
-      const menuToggle = document.querySelector('.menu-toggle');
-      const nav = document.querySelector('.nav');
-
-      menuToggle.addEventListener('click', () => {
-        const isOpen = nav.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
-      });
-
-      document.querySelectorAll('.nav a').forEach((link) => {
-        link.addEventListener('click', () => {
-          nav.classList.remove('open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-    </script>
   </body>
 </html>

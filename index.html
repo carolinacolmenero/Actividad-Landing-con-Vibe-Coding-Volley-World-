@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volley World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --azul-oscuro: #0b1f3a;
+        --azul: #123f74;
+        --azul-claro: #5ac8ff;
+        --naranja: #ffb347;
+        --blanco: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Montserrat", Arial, sans-serif;
+        background: #f2f7ff;
+        color: var(--azul-oscuro);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1200px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: linear-gradient(180deg, rgba(10, 25, 48, 0.98), rgba(11, 31, 58, 0.94));
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 12px 30px rgba(11, 31, 58, 0.16);
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 82px;
+        gap: 1.5rem;
+        padding: 0.3rem 0;
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.85rem;
+        color: var(--blanco);
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+
+      .logo-mark {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ffffff 0%, #dff7ff 18%, #7ed8ff 28%, #0d5ec7 62%, #06182f 100%);
+        position: relative;
+        box-shadow: inset 0 0 0 4px rgba(255,255,255,0.55), 0 10px 24px rgba(94, 200, 255, 0.35);
+      }
+
+      .logo-mark::before,
+      .logo-mark::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        border-radius: 50%;
+      }
+
+      .logo-mark::before {
+        width: 24px;
+        height: 24px;
+        border: 3px solid rgba(255,255,255,0.96);
+        border-top-color: transparent;
+        transform: rotate(28deg);
+      }
+
+      .logo-mark::after {
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        left: 15px;
+        top: 12px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+      }
+
+      .nav a {
+        position: relative;
+        color: rgba(255,255,255,0.82);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: color 0.2s ease, transform 0.2s ease;
+      }
+
+      .nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.55rem;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, var(--azul-claro), #d6f4ff);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.2s ease;
+      }
+
+      .nav a:hover,
+      .nav a:focus-visible {
+        color: var(--blanco);
+        transform: translateY(-1px);
+      }
+
+      .nav a:hover::after,
+      .nav a:focus-visible::after {
+        transform: scaleX(1);
+      }
+
+      .nav-cta {
+        background: linear-gradient(135deg, #ffd38c, var(--naranja));
+        color: #0d223f !important;
+        padding: 0.8rem 1.2rem;
+        border-radius: 999px;
+        box-shadow: 0 12px 24px rgba(255, 179, 71, 0.28);
+        letter-spacing: 0.08em;
+      }
+
+      .nav-cta::after {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: none;
+        border: none;
+        background: transparent;
+        color: #fff;
+        font-size: 1.9rem;
+        cursor: pointer;
+      }
+
+      .anchor {
+        display: block;
+        width: 100%;
+        height: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#inicio" class="logo" aria-label="Inicio">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span>Volley World</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+        <nav class="nav" aria-label="Menú principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#historia">Historia</a>
+          <a href="#reglas">Reglas</a>
+          <a href="#equipos">Equipos</a>
+          <a href="#contacto" class="nav-cta">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <div id="inicio" class="anchor" aria-hidden="true"></div>
+    <div id="historia" class="anchor" aria-hidden="true"></div>
+    <div id="reglas" class="anchor" aria-hidden="true"></div>
+    <div id="equipos" class="anchor" aria-hidden="true"></div>
+    <div id="contacto" class="anchor" aria-hidden="true"></div>
+
+    <script>
+      // Sin comportamiento responsive por ahora; solo navegación por anclas.
+    </script>
+  </body>
+</html>

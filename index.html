@@ -3,9 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Volley World</title>
+    <meta
+      name="description"
+      content="Volley World: descubre cómo se juega al voleibol, sus reglas y la emoción de cada punto."
+    />
+    <meta name="theme-color" content="#081b31" />
+    <title>Volley World — Siente la energía del vóley</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <style>
       :root {
@@ -174,7 +180,25 @@
         height: 1px;
       }
 
-<<<<<<< HEAD
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin-bottom: 1rem;
+        color: #123f74;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 2rem;
+        height: 2px;
+        background: var(--naranja);
+      }
+
       .hero {
         position: relative;
         overflow: hidden;
@@ -302,6 +326,12 @@
         background: rgba(255, 255, 255, 0.12);
       }
 
+      .button-dark {
+        background: #0b1f3a;
+        color: var(--blanco);
+        box-shadow: 0 12px 24px rgba(11, 31, 58, 0.18);
+      }
+
       .hero-visual {
         position: relative;
         min-height: 430px;
@@ -368,6 +398,89 @@
         transform: rotate(-14deg);
       }
 
+      .hero-stamp {
+        position: absolute;
+        right: 1rem;
+        bottom: 1.25rem;
+        z-index: 3;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.15rem;
+        padding: 0.8rem 0.9rem;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.2);
+        color: var(--blanco);
+        backdrop-filter: blur(8px);
+      }
+
+      .hero-stamp strong {
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .hero-stamp span {
+        max-width: 90px;
+        font-size: 0.62rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .hero-scroll {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.7rem;
+        color: rgba(255,255,255,0.8);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .scroll-line {
+        display: block;
+        width: 1px;
+        height: 54px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0));
+      }
+
+      .contact-section {
+        padding: clamp(4rem, 7vw, 6rem) 0 5rem;
+        background: linear-gradient(180deg, #f2f7ff 0%, #edf5ff 100%);
+      }
+
+      .contact-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+
+      .contact-copy {
+        max-width: 700px;
+      }
+
+      .contact-copy h2 {
+        margin-bottom: 1rem;
+        font-size: clamp(2rem, 5vw, 3rem);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+      }
+
+      .contact-copy p {
+        max-width: 620px;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: rgba(11, 31, 58, 0.8);
+      }
+
       @media (max-width: 850px) {
         .hero {
           min-height: auto;
@@ -388,6 +501,40 @@
 
         .hero-visual {
           min-height: min(58vw, 460px);
+        }
+
+        .contact-inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .nav {
+          position: absolute;
+          top: 82px;
+          left: 1rem;
+          right: 1rem;
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.9rem;
+          padding: 1rem 1.1rem;
+          border-radius: 16px;
+          background: rgba(11, 31, 58, 0.97);
+          box-shadow: 0 12px 30px rgba(11, 31, 58, 0.22);
+        }
+
+        .nav.open {
+          display: flex;
+        }
+
+        .nav a {
+          letter-spacing: 0.08em;
         }
       }
 
@@ -421,54 +568,52 @@
           width: 56px;
           height: 56px;
           font-size: 1.45rem;
-=======
-      @media (max-width: 760px) {
-        .menu-toggle {
-          display: block;
-        }
-
-        .nav {
-          position: absolute;
-          top: 82px;
-          left: 1rem;
-          right: 1rem;
-          display: none;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 0.9rem;
-          padding: 1rem 1.1rem;
-          border-radius: 16px;
-          background: rgba(11, 31, 58, 0.97);
-          box-shadow: 0 12px 30px rgba(11, 31, 58, 0.22);
-        }
-
-        .nav.open {
-          display: flex;
-        }
-
-        .nav a {
-          letter-spacing: 0.08em;
->>>>>>> 58e2b8a (Añadir diseño adaptable a dispositivos móviles (Responsive))
         }
       }
     </style>
+
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a href="#inicio" class="logo" aria-label="Inicio">
-          <span class="logo-mark" aria-hidden="true"></span>
+        <a href="#inicio" class="logo" aria-label="Volley World, inicio">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="23" fill="#14579B" />
+              <g stroke="rgba(255,255,255,.7)" stroke-width="1">
+                <path d="M3 32h42M2 39h44M9 29v15M18 29v16M27 29v16M36 29v15" />
+              </g>
+              <circle cx="22" cy="16" r="11" fill="#F8FAFC" />
+              <g fill="none" stroke-linecap="round" stroke-width="2.6">
+                <path d="M13 10c5 1 9 4 11 8 1.5 3 1 6-.5 9" stroke="#14579B" />
+                <path d="M22 5c3 4 4 8 2 12-1.5 3.5-1.3 6.5 1 10" stroke="#F0A52F" />
+                <path d="M31 11c-4 1-7 3.5-8 7" stroke="#14579B" />
+              </g>
+              <circle cx="22" cy="16" r="11" stroke="rgba(255,255,255,.95)" stroke-width="1" />
+              <circle cx="24" cy="24" r="23" stroke="rgba(255,255,255,.86)" stroke-width="1" />
+            </svg>
+          </span>
           <span>Volley World</span>
         </a>
 
-        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-controls="main-nav"
+          aria-expanded="false"
+        >
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
 
-        <nav class="nav" aria-label="Menú principal">
+        <nav class="nav" id="main-nav" aria-label="Menú principal">
           <a href="#inicio">Inicio</a>
-          <a href="#historia">Historia</a>
-          <a href="#reglas">Reglas</a>
-          <a href="#equipos">Equipos</a>
-          <a href="#contacto" class="nav-cta">Contacto</a>
+          <a href="#contacto">¿Qué es el vóley?</a>
+          <a href="#contacto">Cómo se juega</a>
+          <a href="#contacto">Contacto</a>
+          <a class="nav-cta" href="#contacto">Descúbrelo <span aria-hidden="true">↗</span></a>
         </nav>
       </div>
     </header>
@@ -476,34 +621,57 @@
     <main>
       <section id="inicio" class="hero" aria-labelledby="hero-title">
         <div class="container hero-inner">
-          <div class="hero-copy">
-            <p class="hero-eyebrow">Volley World · Desde 1895</p>
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow hero-eyebrow">Volley World <span aria-hidden="true">·</span> Desde 1895</p>
             <h1 id="hero-title">Siente la energía <span>del vóley.</span></h1>
             <p class="hero-description">
-              Cada saque es una oportunidad. Descubre el deporte que convierte seis jugadores en un solo equipo.
+              Saques, recepciones y remates: descubre cómo se juega y por qué cada punto se vive al máximo.
             </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#historia">
-                Descubre el juego <span aria-hidden="true">→</span>
-              </a>
-              <a class="button button-secondary" href="#reglas">Conoce las reglas</a>
-            </div>
+            <a class="button button-primary" href="#contacto">
+              Descubre el voleibol <span aria-hidden="true">→</span>
+            </a>
           </div>
 
-          <figure class="hero-visual">
+          <figure class="hero-visual" data-reveal>
             <div class="hero-photo">
               <img
                 src="https://images.unsplash.com/photo-1592656094267-764a45160876?auto=format&fit=crop&w=1400&q=85"
-                alt="Partido de voleibol en plena acción"
+                alt="Balón de voleibol sobre la arena de una pista exterior"
                 fetchpriority="high"
               />
             </div>
             <figcaption class="hero-photo-label">
-              <span>Pasión · Equipo · Juego</span>
-              <span aria-hidden="true">01 / 06</span>
+              <span>Pasión <i aria-hidden="true">·</i> Equipo <i aria-hidden="true">·</i> Juego</span>
             </figcaption>
             <span class="hero-ball" aria-hidden="true">🏐</span>
+            <div class="hero-stamp" aria-label="Seis jugadores por lado">
+              <strong>6</strong>
+              <span>por lado en pista</span>
+            </div>
           </figure>
+        </div>
+        <a class="hero-scroll" href="#contacto">
+          <span>Así se juega</span>
+          <span class="scroll-line" aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <section id="contacto" class="contact-section" aria-labelledby="contact-title">
+        <div class="container contact-inner" data-reveal>
+          <div class="contact-copy">
+            <p class="eyebrow">El objetivo: mantener el balón en juego</p>
+            <h2 id="contact-title">Tres toques. Un punto. Pura emoción.</h2>
+            <p>
+              Dos equipos se enfrentan separados por una red. Cada lado tiene hasta tres contactos para devolver el balón
+              y buscar que toque el suelo del campo contrario.
+            </p>
+          </div>
+          <a
+            class="button button-dark"
+            href="mailto:?subject=Quiero%20saber%20m%C3%A1s%20sobre%20el%20voleibol&amp;body=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20el%20voleibol."
+          >
+            Contacto <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </section>
     </main>

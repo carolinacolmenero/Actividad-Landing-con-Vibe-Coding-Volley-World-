@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Volley World: descubre cómo se juega al voleibol, sus reglas y la emoción de cada punto."
+    />
+    <meta name="theme-color" content="#081b31" />
+    <title>Volley World — Siente la energía del vóley</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#inicio" class="logo" aria-label="Volley World, inicio">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="23" fill="#14579B" />
+              <g stroke="rgba(255,255,255,.7)" stroke-width="1">
+                <path d="M3 32h42M2 39h44M9 29v15M18 29v16M27 29v16M36 29v15" />
+              </g>
+              <circle cx="22" cy="16" r="11" fill="#F8FAFC" />
+              <g fill="none" stroke-linecap="round" stroke-width="2.6">
+                <path d="M13 10c5 1 9 4 11 8 1.5 3 1 6-.5 9" stroke="#14579B" />
+                <path d="M22 5c3 4 4 8 2 12-1.5 3.5-1.3 6.5 1 10" stroke="#F0A52F" />
+                <path d="M31 11c-4 1-7 3.5-8 7" stroke="#14579B" />
+              </g>
+              <circle cx="22" cy="16" r="11" stroke="rgba(255,255,255,.95)" stroke-width="1" />
+              <circle cx="24" cy="24" r="23" stroke="rgba(255,255,255,.86)" stroke-width="1" />
+            </svg>
+          </span>
+          <span>Volley World</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-controls="main-nav"
+          aria-expanded="false"
+        >
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <nav class="nav" id="main-nav" aria-label="Menú principal">
+          <a href="#inicio" aria-current="page">Inicio</a>
+          <a href="#que-es">¿Qué es el vóley?</a>
+          <a href="guia.html">Cómo se juega</a>
+          <a href="#contacto">Contacto</a>
+          <a class="nav-cta" href="#galeria">Descúbrelo <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow hero-eyebrow">Volley World <span aria-hidden="true">·</span> Desde 1895</p>
+            <h1 id="hero-title">Siente la energía <span>del vóley.</span></h1>
+            <p class="hero-description">
+              Saques, recepciones y remates: descubre cómo se juega y por qué cada punto se vive al máximo.
+            </p>
+            <a class="button button-primary" href="#que-es">
+              Descubre el voleibol <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <figure class="hero-visual" data-reveal>
+            <div class="hero-photo">
+              <img
+                src="https://images.unsplash.com/photo-1592656094267-764a45160876?auto=format&fit=crop&w=1400&q=85"
+                alt="Balón de voleibol sobre la arena de una pista exterior"
+                fetchpriority="high"
+              />
+            </div>
+            <figcaption class="hero-photo-label">
+              <span>Pasión <i aria-hidden="true">·</i> Equipo <i aria-hidden="true">·</i> Juego</span>
+            </figcaption>
+            <span class="hero-ball" aria-hidden="true">🏐</span>
+            <div class="hero-stamp" aria-label="Seis jugadores por lado">
+              <strong>6</strong>
+              <span>por lado en pista</span>
+            </div>
+          </figure>
+        </div>
+        <a class="hero-scroll" href="guia.html">
+          <span>Así se juega</span>
+          <span class="scroll-line" aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <section id="que-es" class="info-section" aria-labelledby="about-title">
+        <div class="container info-layout">
+          <div class="info-copy" data-reveal>
+            <p class="eyebrow">Un deporte de equipo</p>
+            <h2 id="about-title">¿Qué es el voleibol?</h2>
+            <p>
+              Es un deporte de equipo en el que dos conjuntos separados por una red intentan enviar el balón
+              al suelo del campo contrario. La pelota no se agarra ni se retiene: cada contacto es un golpe
+              y cada jugada combina reflejos, coordinación y estrategia.
+            </p>
+            <p>
+              Lo creó William G. Morgan en 1895, en Massachusetts, como una alternativa menos brusca al
+              baloncesto. Primero se llamó <em>mintonette</em>; pronto pasó a conocerse como volleyball,
+              por el intercambio del balón por encima de la red. Hoy se juega en pabellón y en la playa,
+              con reglas y tamaños de equipo distintos.
+            </p>
+          </div>
+          <div class="info-facts" aria-label="Datos básicos del voleibol" data-reveal>
+            <article class="fact-card">
+              <span class="fact-number">6</span>
+              <h3>jugadores en pista</h3>
+              <p>En voleibol de sala, seis jugadores de cada equipo ocupan posiciones que cambian durante el partido.</p>
+            </article>
+            <article class="fact-card">
+              <span class="fact-number">3</span>
+              <h3>toques para atacar</h3>
+              <p>Lo habitual es recibir, colocar y rematar. El bloqueo no cuenta como uno de esos tres contactos.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="discover-section" aria-labelledby="discover-title">
+        <div class="container">
+          <div class="discover-heading" data-reveal>
+            <p class="eyebrow">Una jugada en equipo</p>
+            <h2 id="discover-title">De la recepción al remate, cada toque cuenta.</h2>
+            <p>
+              Seis jugadores leen el juego, se cubren y se mueven como uno. Descubre qué pasa en la pista
+              y cómo cada posición ayuda a construir el punto.
+            </p>
+          </div>
+          <div class="discover-grid">
+            <a class="discover-card" href="guia.html#como-se-juega" data-reveal>
+              <span class="discover-number">01 / REGLAS</span>
+              <h3>Entiende el juego</h3>
+              <p>El saque, los tres toques, la puntuación y la rotación explicados paso a paso.</p>
+              <span class="discover-link">Ver la guía <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="discover-card" href="guia.html#posiciones" data-reveal>
+              <span class="discover-number">02 / POSICIONES</span>
+              <h3>Conoce el equipo</h3>
+              <p>Colocador, centrales, puntas, opuesto y líbero: cada rol tiene su misión.</p>
+              <span class="discover-link">Ver las posiciones <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="discover-card discover-card-highlight" href="#galeria" data-reveal>
+              <span class="discover-number">03 / EN ACCIÓN</span>
+              <h3>Vívelo de cerca</h3>
+              <p>Explora 14 imágenes y descubre las técnicas que mantienen el balón en juego.</p>
+              <span class="discover-link">Ir a la galería <span aria-hidden="true">→</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" class="gallery-section" aria-labelledby="gallery-title">
+        <div class="container">
+          <div class="gallery-header" data-reveal>
+            <p class="eyebrow">Del primer toque al punto</p>
+            <h2 id="gallery-title">El juego, en acción</h2>
+            <p class="section-desc">
+              Cada imagen muestra una jugada real: fíjate en cómo el equipo se coloca para dar continuidad al balón.
+            </p>
+
+            <div class="gallery-filters" aria-label="Filtrar fotos">
+              <button class="filter-btn active" type="button" data-filter="all">Todas (14)</button>
+              <button class="filter-btn" type="button" data-filter="tecnica">Técnicas (4)</button>
+              <button class="filter-btn" type="button" data-filter="posicion">Equipo y roles (7)</button>
+              <button class="filter-btn" type="button" data-filter="variante">Modalidades (3)</button>
+            </div>
+          </div>
+
+          <div class="gallery-grid">
+            <article class="gallery-card" data-category="tecnica" data-reveal>
+              <div class="card-media">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Volleyball_Jump_Serve-pjt.jpg/960px-Volleyball_Jump_Serve-pjt.jpg?utm_source=commons.wikimedia.org" alt="Jugador en suspensión ejecutando un saque de voleibol" loading="lazy" />
+                <span class="card-badge">Técnica</span>
+              </div>
+              <p class="image-credit">Foto: pjt56 · <a href="https://commons.wikimedia.org/wiki/File:Volleyball_Jump_Serve-pjt.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></p>
+              <div class="card-body">
+                <span class="card-number">01</span>
+                <h3>El saque</h3>
+                <p>Es el golpe que inicia el punto. Puede hacerse desde el suelo o en salto; su objetivo es dificultar la recepción rival.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="tecnica" data-reveal>
+              <div class="card-media">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Volleyball_reception.jpg/960px-Volleyball_reception.jpg?utm_source=commons.wikimedia.org" alt="Jugadora recibiendo el balón con los antebrazos" loading="lazy" />
+                <span class="card-badge">Técnica</span>
+              </div>
+              <p class="image-credit">Foto: druchoy / Andrew Choy · <a href="https://commons.wikimedia.org/wiki/File:Volleyball_reception.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a></p>
+              <div class="card-body">
+                <span class="card-number">02</span>
+                <h3>La recepción</h3>
+                <p>Un buen control del saque deja el balón a una altura y distancia que permiten preparar el siguiente toque.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="posicion" data-reveal>
+              <div class="card-media">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Volleyball_spike.jpg/960px-Volleyball_spike.jpg?utm_source=commons.wikimedia.org" alt="Jugador saltando para rematar el balón por encima de la red" loading="lazy" />
+                <span class="card-badge card-badge-alt">Equipo</span>
+              </div>
+              <p class="image-credit">Foto: druchoy / Andrew Choy · <a href="https://commons.wikimedia.org/wiki/File:Volleyball_spike.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a></p>
+              <div class="card-body">
+                <span class="card-number">03</span>
+                <h3>Punta o atacante exterior</h3>
+                <p>Participa en la recepción y suele atacar por la banda izquierda. Necesita combinar potencia y control para resolver cada balón.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="posicion" data-reveal>
+              <div class="card-media">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Volleyball_attack_and_triple_block-pjt.jpg/960px-Volleyball_attack_and_triple_block-pjt.jpg?utm_source=commons.wikimedia.org" alt="Tres jugadores forman un bloqueo frente a un remate" loading="lazy" />
+                <span class="card-badge card-badge-alt">Equipo</span>
+              </div>
+              <p class="image-credit">Foto: pjt56 · <a href="https://commons.wikimedia.org/wiki/File:Volleyball_attack_and_triple_block-pjt.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></p>
+              <div class="card-body">
+                <span class="card-number">04</span>
+                <h3>El central</h3>
+                <p>Lee el ataque rival y se desplaza junto a la red para cerrar el bloqueo con sus compañeros.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="variante" data-reveal>
+              <div class="card-media">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/221000_-_Sitting_volleyball_Australia_defends_-_3b_-_2000_Sydney_match_photo.jpg/960px-221000_-_Sitting_volleyball_Australia_defends_-_3b_-_2000_Sydney_match_photo.jpg?utm_source=commons.wikimedia.org" alt="Jugadores de voleibol sentado levantan los brazos para bloquear el balón" loading="lazy" />
+                <span class="card-badge card-badge-dark">Modalidad</span>
+              </div>
+              <p class="image-credit">Foto: Sport the library · <a href="https://commons.wikimedia.org/wiki/File:221000_-_Sitting_volleyball_Australia_defends_-_3b_-_2000_Sydney_match_photo.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></p>
+              <div class="card-body">
+                <span class="card-number">05</span>
+                <h3>Voleibol sentado</h3>
+                <p>Una modalidad paralímpica de gran ritmo: los equipos juegan sentados, con una red más baja y la pista adaptada.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="tecnica" data-reveal>
+              <div class="card-media">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Block_in_volleyball.jpg/960px-Block_in_volleyball.jpg?utm_source=commons.wikimedia.org" alt="Jugador salta junto a la red para bloquear el ataque rival" loading="lazy" />
+                <span class="card-badge">Técnica</span>
+              </div>
+              <p class="image-credit">Foto: Zorro2212 · <a href="https://commons.wikimedia.org/wiki/File:Block_in_volleyball.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></p>
+              <div class="card-body">
+                <span class="card-number">06</span>
+                <h3>El bloqueo</h3>
+                <p>Los jugadores de primera línea saltan junto a la red con las manos firmes para frenar o desviar el ataque rival.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="posicion" data-reveal>
+              <div class="card-media">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Rosita_Sanchez_jugadora_de_voleibol_de_Nuevo_Laredo_voleando.jpg/960px-Rosita_Sanchez_jugadora_de_voleibol_de_Nuevo_Laredo_voleando.jpg?utm_source=commons.wikimedia.org" alt="Jugadora se coloca bajo el balón para realizar el siguiente toque" loading="lazy" />
+                <span class="card-badge card-badge-alt">Equipo</span>
+              </div>
+              <p class="image-credit">Foto: Miguel Angel Omaña Rojas · <a href="https://commons.wikimedia.org/wiki/File:Rosita_Sanchez_jugadora_de_voleibol_de_Nuevo_Laredo_voleando.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0</a></p>
+              <div class="card-body">
+                <span class="card-number">07</span>
+                <h3>Colocador</h3>
+                <p>Dirige el segundo toque y elige a qué atacante dar el balón para crear la mejor opción de punto.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="posicion" data-reveal>
+              <div class="card-media">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/241000_-_Standing_volleyball_Australian_team_huddle_-_3b_-_2000_Sydney_match_photo.jpg/960px-241000_-_Standing_volleyball_Australian_team_huddle_-_3b_-_2000_Sydney_match_photo.jpg?utm_source=commons.wikimedia.org" alt="Equipo de voleibol reunido en un círculo para coordinarse" loading="lazy" />
+                <span class="card-badge card-badge-alt">Equipo</span>
+              </div>
+              <p class="image-credit">Foto: Sport the library · <a href="https://commons.wikimedia.org/wiki/File:241000_-_Standing_volleyball_Australian_team_huddle_-_3b_-_2000_Sydney_match_photo.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></p>
+              <div class="card-body">
+                <span class="card-number">08</span>
+                <h3>Comunicación y equipo</h3>
+                <p>Hablarse antes y durante el punto ayuda a repartir responsabilidades, evitar choques y preparar la siguiente jugada.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="variante" data-reveal>
+              <div class="card-media">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Marquette_vs._Milwaukee_women%27s_volleyball_2023_09_%28in-match_action%29.jpg/960px-Marquette_vs._Milwaukee_women%27s_volleyball_2023_09_%28in-match_action%29.jpg?utm_source=commons.wikimedia.org" alt="Partido de voleibol de sala en una pista cubierta" loading="lazy" />
+                <span class="card-badge card-badge-dark">Modalidad</span>
+              </div>
+              <p class="image-credit">Foto: Michael Barera · <a href="https://commons.wikimedia.org/wiki/File:Marquette_vs._Milwaukee_women%27s_volleyball_2023_09_(in-match_action).jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></p>
+              <div class="card-body">
+                <span class="card-number">09</span>
+                <h3>Voleibol de sala</h3>
+                <p>La modalidad más conocida se juega en una pista cubierta, con seis jugadores por equipo y rotación cuando se recupera el saque.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="variante" data-reveal>
+              <div class="card-media">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Male_beach_volleyball_player_spiking_a_volleyball.jpg/960px-Male_beach_volleyball_player_spiking_a_volleyball.jpg?utm_source=commons.wikimedia.org" alt="Jugador de vóley playa salta para atacar el balón junto a la red" loading="lazy" />
+                <span class="card-badge card-badge-dark">Modalidad</span>
+              </div>
+              <p class="image-credit">Foto: U.S. Department of Homeland Security · <a href="https://commons.wikimedia.org/wiki/File:Male_beach_volleyball_player_spiking_a_volleyball.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · Dominio público</p>
+              <div class="card-body">
+                <span class="card-number">10</span>
+                <h3>Vóley playa: el ataque</h3>
+                <p>En esta modalidad cada equipo suele tener dos jugadores. El atacante ajusta el salto, la orientación y la fuerza a la arena y al viento.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="posicion" data-reveal>
+              <div class="card-media">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Bulgarian_national_volleyball_team_in_the_match_against_Japan_in_the_FIVB_World_League_2011.jpg/960px-Bulgarian_national_volleyball_team_in_the_match_against_Japan_in_the_FIVB_World_League_2011.jpg?utm_source=commons.wikimedia.org" alt="Los seis jugadores de cada equipo ocupan sus posiciones antes del saque" loading="lazy" />
+                <span class="card-badge card-badge-alt">Equipo</span>
+              </div>
+              <p class="image-credit">Foto: Aleksanderpc · <a href="https://commons.wikimedia.org/wiki/File:Bulgarian_national_volleyball_team_in_the_match_against_Japan_in_the_FIVB_World_League_2011.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a></p>
+              <div class="card-body">
+                <span class="card-number">11</span>
+                <h3>Seis en pista</h3>
+                <p>Tres jugadores parten cerca de la red y tres en el fondo. Al recuperar el saque, el equipo rota para ocupar una nueva posición.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="posicion" data-reveal>
+              <div class="card-media">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/241000_-_Standing_volleyball_Brett_Holcombe_spikes_-_3b_-_2000_Sydney_match_photo.jpg/960px-241000_-_Standing_volleyball_Brett_Holcombe_spikes_-_3b_-_2000_Sydney_match_photo.jpg?utm_source=commons.wikimedia.org" alt="Atacante salta junto a la red para golpear el balón" loading="lazy" />
+                <span class="card-badge card-badge-alt">Equipo</span>
+              </div>
+              <p class="image-credit">Foto: Sport the library · <a href="https://commons.wikimedia.org/wiki/File:241000_-_Standing_volleyball_Brett_Holcombe_spikes_-_3b_-_2000_Sydney_match_photo.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></p>
+              <div class="card-body">
+                <span class="card-number">12</span>
+                <h3>Opuesto</h3>
+                <p>Es una referencia de ataque desde el lado contrario al colocador y puede sumar puntos también desde la línea zaguera.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="posicion" data-reveal>
+              <div class="card-media">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Stacy_Sykora_during_a_match.JPG/960px-Stacy_Sykora_during_a_match.JPG?utm_source=commons.wikimedia.org" alt="Jugadora especialista en recepción se lanza para salvar el balón" loading="lazy" />
+                <span class="card-badge card-badge-alt">Equipo</span>
+              </div>
+              <p class="image-credit">Foto: Rachel Boettcher, U.S. Air Force · <a href="https://commons.wikimedia.org/wiki/File:Stacy_Sykora_during_a_match.JPG" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · Dominio público</p>
+              <div class="card-body">
+                <span class="card-number">13</span>
+                <h3>Líbero</h3>
+                <p>Especialista de recepción y defensa. Su camiseta de distinto color permite reconocerle rápidamente en pista.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" data-category="tecnica" data-reveal>
+              <div class="card-media card-media-setting">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/High_school_women_volleyball_08.jpg/960px-High_school_women_volleyball_08.jpg?utm_source=commons.wikimedia.org" alt="Jugadora realiza una colocación por encima de la cabeza durante un partido" loading="lazy" />
+                <span class="card-badge">Técnica</span>
+              </div>
+              <p class="image-credit">Foto: K.M. Klemencic · <a href="https://commons.wikimedia.org/wiki/File:High_school_women_volleyball_08.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a></p>
+              <div class="card-body">
+                <span class="card-number">14</span>
+                <h3>La colocación</h3>
+                <p>Con las manos sobre la frente, se impulsa el balón con precisión para que un compañero pueda rematar.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="contact-section" aria-labelledby="contact-title">
+        <div class="container contact-inner" data-reveal>
+          <div class="contact-copy">
+            <p class="eyebrow">¿Te gustaría saber más?</p>
+            <h2 id="contact-title">Hablemos de vóley.</h2>
+            <p>
+              ¿Tienes dudas sobre las reglas, las posiciones o cómo empezar a jugar? Cuéntanos qué te gustaría aprender
+              y te responderemos encantados. El correo se abrirá con un mensaje inicial que puedes editar antes de enviarlo.
+            </p>
+          </div>
+          <a
+            class="button button-dark"
+            href="mailto:?subject=Quiero%20aprender%20m%C3%A1s%20sobre%20el%20voleibol&amp;body=Hola%2C%20equipo%20de%20Volley%20World%3A%0A%0AMe%20gustar%C3%ADa%20aprender%20m%C3%A1s%20sobre%20el%20voleibol%20y%20seguir%20mejorando.%20%C2%BFPodr%C3%ADan%20recomendarme%20recursos%20o%20consejos%20para%20empezar%3F%0A%0AMe%20interesa%20especialmente%3A%20las%20reglas%20y%20rotaciones%2C%20la%20t%C3%A9cnica%2C%20las%20posiciones%20y%20los%20ejercicios%20de%20iniciaci%C3%B3n.%0A%0A%C2%A1Muchas%20gracias!%0A%0AUn%20saludo%2C%0A%5BTu%20nombre%5D"
+          >
+            Preparar un correo <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="#inicio" class="logo"><span>Volley World</span></a>
+          <p class="footer-tagline">Tu portal sobre la pasión y la estrategia del voleibol.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#que-es">¿Qué es el vóley?</a></li>
+            <li><a href="guia.html">Cómo se juega</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-about">
+          <h4>Para seguir jugando</h4>
+          <p>Aprende las reglas, conoce cada rol y disfruta el voleibol desde el primer saque.</p>
+          <a href="guia.html">Explorar la guía <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; 2026 Volley World. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

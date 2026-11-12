@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aprende cómo se juega al voleibol: los tres toques, las reglas, las posiciones y la rotación."
+    />
+    <meta name="theme-color" content="#081b31" />
+    <title>Cómo se juega al voleibol — Volley World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html#inicio" class="logo" aria-label="Volley World, inicio">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="23" fill="#14579B" />
+              <g stroke="rgba(255,255,255,.7)" stroke-width="1">
+                <path d="M3 32h42M2 39h44M9 29v15M18 29v16M27 29v16M36 29v15" />
+              </g>
+              <circle cx="22" cy="16" r="11" fill="#F8FAFC" />
+              <g fill="none" stroke-linecap="round" stroke-width="2.6">
+                <path d="M13 10c5 1 9 4 11 8 1.5 3 1 6-.5 9" stroke="#14579B" />
+                <path d="M22 5c3 4 4 8 2 12-1.5 3.5-1.3 6.5 1 10" stroke="#F0A52F" />
+                <path d="M31 11c-4 1-7 3.5-8 7" stroke="#14579B" />
+              </g>
+              <circle cx="22" cy="16" r="11" stroke="rgba(255,255,255,.95)" stroke-width="1" />
+              <circle cx="24" cy="24" r="23" stroke="rgba(255,255,255,.86)" stroke-width="1" />
+            </svg>
+          </span>
+          <span>Volley World</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-controls="main-nav"
+          aria-expanded="false"
+        >
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+        <nav class="nav" id="main-nav" aria-label="Menú principal">
+          <a href="index.html#inicio">Inicio</a>
+          <a href="index.html#que-es">¿Qué es el vóley?</a>
+          <a href="#como-se-juega" aria-current="page">Cómo se juega</a>
+          <a href="index.html#contacto">Contacto</a>
+          <a class="nav-cta" href="index.html#galeria">Descúbrelo <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="guide-title">
+        <div class="container page-hero-inner" data-reveal>
+          <p class="eyebrow hero-eyebrow">La guía para empezar</p>
+          <h1 id="guide-title">Lee el juego.<br /><span>Juega en equipo.</span></h1>
+          <p>
+            Una red, un balón y tres toques para construir la jugada. Estas son las claves para seguir cada punto
+            y entender qué hace cada jugador en la pista.
+          </p>
+          <a class="button button-primary" href="#como-se-juega">Descubre las reglas <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section id="como-se-juega" class="play-section guide-play" aria-labelledby="play-title">
+        <div class="container">
+          <div class="play-heading" data-reveal>
+            <p class="eyebrow">Reglas para empezar</p>
+            <h2 id="play-title">¿Cómo se juega?</h2>
+            <p class="section-desc">
+              El objetivo es que el balón toque el suelo del campo contrario o que el rival no pueda devolverlo legalmente.
+              Cada jugada empieza con un saque y puede cambiar de rumbo en un instante.
+            </p>
+          </div>
+          <ol class="play-steps">
+            <li data-reveal>
+              <span class="step-number">01</span>
+              <div>
+                <h3>Saca y comienza el punto</h3>
+                <p>El saque se realiza desde detrás de la línea de fondo. El equipo que recibe intenta controlar el balón y organizar su respuesta.</p>
+              </div>
+            </li>
+            <li data-reveal>
+              <span class="step-number">02</span>
+              <div>
+                <h3>Recibe y prepara</h3>
+                <p>El primer toque suele ser una recepción de antebrazos. El colocador usa el segundo para dejar el balón listo para atacar.</p>
+              </div>
+            </li>
+            <li data-reveal>
+              <span class="step-number">03</span>
+              <div>
+                <h3>Ataca y defiende</h3>
+                <p>Con el tercer toque, el equipo remata, hace una finta o busca un hueco. El rival puede bloquear o defender para continuar el intercambio.</p>
+              </div>
+            </li>
+          </ol>
+          <div class="rules-summary" data-reveal>
+            <article class="rules-score">
+              <span class="rules-kicker">El marcador</span>
+              <h3>Gana quien llega a 25… por dos.</h3>
+              <p>
+                Cada jugada vale un punto. Los sets se juegan a 25 y el partido es al mejor de cinco; si hay quinto set,
+                se juega a 15. En todos los casos hay que ganar por una diferencia mínima de dos puntos.
+              </p>
+            </article>
+            <article class="rules-basics">
+              <span class="rules-kicker">Lo esencial</span>
+              <ul>
+                <li>Hasta tres toques para devolver el balón; el bloqueo no cuenta como uno de ellos.</li>
+                <li>No se puede retener, acompañar ni golpear dos veces seguidas como primer toque del equipo.</li>
+                <li>Al recuperar el saque, el equipo rota una posición en sentido horario.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="posiciones" class="positions-section" aria-labelledby="positions-title">
+        <div class="container">
+          <div class="positions-heading" data-reveal>
+            <p class="eyebrow">Dentro del equipo</p>
+            <h2 id="positions-title">¿Quién hace qué en la pista?</h2>
+            <p>
+              Los números muestran el orden de rotación, no una posición fija. Tras el saque, cada jugador se mueve
+              según la táctica del equipo.
+            </p>
+          </div>
+
+          <div class="positions-layout">
+            <div class="court-panel" data-reveal>
+              <p class="court-label">Vista del equipo desde su campo</p>
+              <div class="court" role="img" aria-label="Media pista de voleibol vista desde el equipo: la red está arriba; las posiciones cuatro, tres y dos ocupan la zona delantera o zona de ataque, y las posiciones cinco, seis y uno el fondo">
+                <ol class="court-positions" aria-hidden="true">
+                  <li><span>4</span><small>Delantero</small></li>
+                  <li><span>3</span><small>Delantero</small></li>
+                  <li><span>2</span><small>Delantero</small></li>
+                  <li><span>5</span><small>Fondo</small></li>
+                  <li><span>6</span><small>Fondo</small></li>
+                  <li><span>1</span><small>Saque</small></li>
+                </ol>
+                <span class="court-net" aria-hidden="true"><span>RED</span></span>
+              </div>
+              <div class="court-caption"><span>Delantera · zona de ataque</span><span>Fondo · zona de defensa</span></div>
+            </div>
+
+            <div class="role-content" data-reveal>
+              <h3>Un rol para cada fortaleza</h3>
+              <div class="roles-grid">
+                <article class="role-card">
+                  <span class="role-index">01</span>
+                  <h4>Colocador</h4>
+                  <p>Lee la recepción y decide cómo distribuir el segundo toque para sorprender al bloqueo.</p>
+                </article>
+                <article class="role-card">
+                  <span class="role-index">02</span>
+                  <h4>Puntas</h4>
+                  <p>Ayudan a recibir y atacan desde las bandas. Necesitan adaptarse a muchas situaciones.</p>
+                </article>
+                <article class="role-card">
+                  <span class="role-index">03</span>
+                  <h4>Centrales</h4>
+                  <p>Se desplazan junto a la red para cerrar el bloqueo y atacar con rapidez por el centro.</p>
+                </article>
+                <article class="role-card">
+                  <span class="role-index">04</span>
+                  <h4>Opuesto</h4>
+                  <p>Ataca desde el lado contrario al colocador y suele ser una referencia ofensiva importante.</p>
+                </article>
+                <article class="role-card role-card-wide">
+                  <span class="role-index">05</span>
+                  <h4>Líbero</h4>
+                  <p>Especialista de recepción y defensa; viste una camiseta distinta y sustituye a jugadores de la zona trasera.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-next" aria-label="Sigue explorando el voleibol">
+        <div class="container guide-next-inner" data-reveal>
+          <div>
+            <p class="eyebrow">Ya conoces lo básico</p>
+            <h2>Ahora, mira el juego en acción.</h2>
+          </div>
+          <a class="button button-dark" href="index.html#galeria">Explorar la galería <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="index.html#inicio" class="logo"><span>Volley World</span></a>
+          <p class="footer-tagline">Tu portal sobre la pasión y la estrategia del voleibol.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html#inicio">Inicio</a></li>
+            <li><a href="index.html#que-es">¿Qué es el vóley?</a></li>
+            <li><a href="#como-se-juega">Cómo se juega</a></li>
+            <li><a href="index.html#galeria">Galería</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-about">
+          <h4>Para seguir jugando</h4>
+          <p>Aprende las reglas, conoce cada rol y disfruta el voleibol desde el primer saque.</p>
+          <a href="#como-se-juega">Explorar la guía <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; 2026 Volley World. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>
